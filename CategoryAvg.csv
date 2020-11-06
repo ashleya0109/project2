@@ -1,0 +1,11 @@
+Category,Avg_Price,Avg_Reviews,Avg_Rating,Rating_Fill,Label
+Amazon Devices,91.02,44394,4.6,0.92,Rating
+Computers/Accessories,138.4,10505,4.5,0.9,Rating
+Fashion,15.24,20235,4.5,0.9,Rating
+Movies & TV,23.22,11656,4.7,0.94,Rating
+Toys & Games,19.29,11858,4.7,0.94,Rating
+Amazon Devices,,,,0.08,Difference
+Computers/Accessories,,,,0.1,Difference
+Fashion,,,,0.1,Difference
+Movies & TV,,,,0.06,Difference
+Toys & Games,,,,0.06,Difference

@@ -68,3 +68,9 @@
     font-size: 13px;
   }
 }
+
+path { 
+  stroke: Blue;
+  stroke-width: 5;
+  fill: No;
+}

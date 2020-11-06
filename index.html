@@ -12,57 +12,75 @@
 
 
 </head>
-
 <body>
+
+<main role="main">
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <select name="meal" id="meal" onChange="changecat(this.value);">
-          <option value="" disabled selected>Select</option>
-          <option value="Fashion">Fashion</option>
-          <option value="Computers/Accessories">Computers/Accessories</option>
-          <option value="Amazon Devices">Amazon Devices</option>
-          <option value="Movies & TV">Movies & TV</option>
-          <option value="Toys & Games">Toys & Games</option>
-      </select>
-      <select name="category" id="category" onChange="datafilter(this.value);"></select>
-          <option value="" disabled selected>Select</option>
-      </select>
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <h1>Amazon Review Word Cloud</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <div id="wordcloud">
-          <!-- We append our chart here. -->
-        </div>
-      </div>
-      <div class="col-xs-12  col-md-9">
-        <div id="priceChart">
-          <!-- We append our chart here. -->
-        </div>
-      </div>
-    </div>
-    
-  
-    </div>
+    <h1 class="display-3">Project 2</h1>
+    <p>Amazon is widely used across the United States however there isnt great data surrounding price fluctuations and best seller rankings. This project focused on collecting data to see an items specific trend over a week</p>
+    <p><b>Data Collecting Technique: </b> Data was collected by screen scraping multiple amazon web pages. I determined what categories I wanted to screen scrape and added to an Array in python along with the base websites that contained the data I needed. This was a two part approach 1st collected high level details about the products but to retrieve the keywords associated with each item I needed to use data from the 1st screen scrape to do a second. Data was stored in a SQL database on Postgres.<br/><b>Cleaning Data: </b>After collecting all the data needed I begin to use sql in python to manipulate the data into various csv that I would need to access via javascript<br/><b>Technology Used: </b>Python, SQL Database, Beautiful soup, Javascript</b></p>
+    <p><a class="btn btn-primary btn-lg" href="https://github.com/ashleya0109/project2" role="button">Git Hub Link »</a></p>
   </div>
 </div>
 
-
-  <!-- Footer-->
-  <div id="footer">
-    <p>The Coding Boot Camp&copy;2016</p>
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-12">
+      <select name="meal" id="meal" onChange="changecat(this.value);">
+        <option value="" disabled selected>Select</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Computers/Accessories">Computers/Accessories</option>
+        <option value="Amazon Devices">Amazon Devices</option>
+        <option value="Movies & TV">Movies & TV</option>
+        <option value="Toys & Games">Toys & Games</option>
+    </select>
+    <select name="category" id="category" onChange="datafilter(this.value);"></select>
+        <option value="" disabled selected>Select</option>
+    </select>
+    <br/>
+    <div id = "desc">
+    </div>
+    </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  
-  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  <div class="row">
+    <div class="col-md-12" id="wordcloud">
+      <h2>Key Words</h2>
+      
+    </div>
+    <div class="col-md-12" id="priceChart">
+      <h2>Price Trend</h2>
+     
+    </div>
+    <div class="col-md-12" id="ranking">
+      <h2>Ranking Trend</h2>
+     
+    </div>
+  </div>
 
+  <hr>
+
+</div> <!-- /container -->
+
+</main>
 </body>
+
+<footer class="container">
+  
+
+<p>© Company 2017-2020</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
 
 </html>
